@@ -1,0 +1,30 @@
+# macOS system files
+.DS_Store
+
+# NiFi logs / temp
+*.log
+*.tmp
+*.bak
+
+# Credentials / Keys
+.env
+*.pem
+*.key
+
+# NiFi libs (JDBC-Treiber nicht versionieren)
+**/nifi-lib/
+
+# NiFi runtime state (falls persistent verwendet)
+flowfile_repository/
+content_repository/
+provenance_repository/
+database_repository/
+
+# Docker
+.docker/
+*.pid
+
+# Python / Virtualenv (falls später genutzt)
+__pycache__/
+.venv/
+
