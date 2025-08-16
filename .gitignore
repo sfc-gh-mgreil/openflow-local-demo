@@ -6,10 +6,13 @@
 *.tmp
 *.bak
 
-# Credentials / Keys
+# Credentials / Keys (niemals ins Repo)
 .env
 *.pem
 *.key
+*.p8
+*.pub
+openflow/.env
 
 # NiFi libs (JDBC-Treiber nicht versionieren)
 **/nifi-lib/
@@ -27,5 +30,3 @@ database_repository/
 # Python / Virtualenv (falls später genutzt)
 __pycache__/
 .venv/
-
-openflow/.env
