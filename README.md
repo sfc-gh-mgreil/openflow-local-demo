@@ -17,18 +17,12 @@ ORACLE_PASSWORD=your_oracle_password
 # NiFi
 NIFI_USER=admin
 NIFI_PASS=your_password
+
 2. Extensions & Drivers
 Place the Snowflake NARs in:
-
-bash
-Kopieren
-Bearbeiten
 ./nifi-extensions/
-Place the JDBC JARs in:
 
-bash
-Kopieren
-Bearbeiten
+Place the JDBC JARs in:
 ./nifi-lib/
 Required:
 
@@ -41,17 +35,11 @@ ojdbc11.jar
 3. Start the Demo
 Run the following command to start Oracle DB and NiFi:
 
-bash
-Kopieren
-Bearbeiten
 docker compose up -d
 Once running, NiFi can be accessed at:
 👉 https://localhost:8443/nifi
 
 📂 Project Structure
-graphql
-Kopieren
-Bearbeiten
 ├── docker-compose.yml     # Container setup for Oracle & NiFi
 ├── nifi-extensions/       # Place Snowflake NARs here
 ├── nifi-lib/              # Place JDBC drivers here
