@@ -23,10 +23,11 @@ services:
       - "8443:8443"
     volumes:
       - nifi_data:/opt/nifi/nifi-current
-      - ./openflow/nifi-extensions:/opt/nifi/nifi-current/extensions:ro
-      # Alle JDBC JARs liegen sauber im Host-Ordner ./openflow/nifi-lib/
-      - ./openflow/nifi-lib/ojdbc11.jar:/opt/nifi/nifi-current/lib/ojdbc11.jar:ro
-      - ./openflow/nifi-lib/snowflake-jdbc-3.26.0.jar:/opt/nifi/nifi-current/lib/snowflake-jdbc-3.26.0.jar:ro
+      - ./nifi-extensions:/opt/nifi/nifi-current/extensions:ro
+      - ./nifi-lib/ojdbc11.jar:/opt/nifi/nifi-current/lib/ojdbc11.jar:ro
+      - ./nifi-lib/snowflake-jdbc-3.26.0.jar:/opt/nifi/nifi-current/lib/snowflake-jdbc-3.26.0.jar:ro
+      # Flow Snapshot -> wird beim Start direkt geladen
+      #- ./nifi-flows/flow.json.gz:/opt/nifi/nifi-current/conf/flow.json.gz:ro
     depends_on:
       - oracledb
     restart: unless-stopped
