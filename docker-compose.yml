@@ -26,6 +26,7 @@ services:
       - ./nifi-extensions:/opt/nifi/nifi-current/extensions:ro
       - ./nifi-lib/ojdbc11.jar:/opt/nifi/nifi-current/lib/ojdbc11.jar:ro
       - ./nifi-lib/snowflake-jdbc-3.26.0.jar:/opt/nifi/nifi-current/lib/snowflake-jdbc-3.26.0.jar:ro
+      - ./rsa_key.p8:/opt/nifi/nifi-current/conf/rsa_key.p8:ro
       # Flow Snapshot -> wird beim Start direkt geladen
       #- ./nifi-flows/flow.json.gz:/opt/nifi/nifi-current/conf/flow.json.gz:ro
     depends_on:
