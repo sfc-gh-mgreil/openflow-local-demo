@@ -28,7 +28,7 @@ Required:
 
 snowflake-jdbc.jar
 
-Optional (for Oracle):
+For oracle connection:
 
 ojdbc11.jar
 
