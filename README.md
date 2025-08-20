@@ -1,4 +1,4 @@
-# OpenFlow Local Demo – Oracle + NiFi + Snowflake
+# Openflow Local Demo – Oracle + NiFi + Snowflake
 
 This repository provides a **local demo setup** to load data from **Oracle** into **Snowflake** using **Apache NiFi**.  
 It bundles all required components into a Docker Compose environment.
